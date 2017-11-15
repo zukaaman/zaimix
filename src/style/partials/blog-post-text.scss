@@ -1,0 +1,137 @@
+.blog-post-text {
+  position: relative;
+}
+
+.blog-post-text__author {
+  position: absolute;
+  top: -37px;
+  left: 15px;
+}
+
+.blog-post-text__author-img {
+  width: 74px;
+  height: 70px;
+
+  background-color: transparent;
+}
+.blog-post-text__author-name {
+  margin: 0;
+
+  color: #000000;
+  font-family: $font-400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.blog-post-text__author-position {
+  margin: 0;
+
+  color: #999999;
+  font-family: $font-400;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.blog-post-text__text-1 {
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 15px;
+
+  color: #000000;
+  font-family: $font-300;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.blog-post-text__text-2 {
+  margin: 0;
+  padding-bottom: 15px;
+
+  color: #000000;
+  font-family: $font-400;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.blog-post-text__bankrupt {
+  width: 180px;
+}
+
+.blog-post-text__bankrupt-img {
+  width: 120px;
+  height: 84px;
+}
+
+.blog-post-text__bankrupt-title {
+  margin: 0;
+  padding-top: 15px;
+
+  color: #0078b4;
+  font-family: $font-400;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+.blog-post-text__bankrupt-text {
+  margin: 0;
+  padding-top: 15px;
+
+  color: #000000;
+  font-family: $font-400;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.blog-post-text__wrapper {
+  padding: 15px 0;
+  margin: 15px 0;
+  background-image: url("../img/blog-post-text.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  p {
+    margin: 0;
+
+    color: #000000;
+    font-family: $font-300;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+  }
+}
+
+.blog-post-text__title {
+  margin: 0;
+
+  color: #000000;
+  font-family: $font-700;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 65px;
+}
+
+.blog-post-text__img {
+  width: 290px;
+  height: 180px;
+}
+
+.blog-post-text__text-3 {
+  margin: 0;
+
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+
+  span {
+    color: #000000;
+  }
+}

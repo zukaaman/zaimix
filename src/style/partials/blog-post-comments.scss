@@ -1,0 +1,139 @@
+.blog-post-comments {
+  padding: 15px 0;
+  padding-top: 50px;
+}
+
+.blog-post-comments__top-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-post-comments__title {
+  margin: 0;
+
+  color: #000000;
+  font-family: $font-700;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.blog-post-comments__number-wrapper {
+  border-radius: 5px;
+  background-color: #e5f1f7;
+}
+
+.blog-post-comments__number {
+  margin: 0;
+  padding: 10px 20px;
+
+  color: #000000;
+  font-family: $font-400;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.blog-post-comments__button {
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  color: #000000;
+  font-family: $font-400;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15px;
+
+  border-radius: 5px;
+  background-color: #fecc00;
+}
+
+.blog-post-comments__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+}
+
+.blog-post-comments__comment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.blog-post-comments__comment-img {
+  width: 46px;
+  height: 46px;
+}
+
+.blog-post-comments__comment-wrapper {
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.blog-post-comments__comment-title {
+  margin: 0;
+  margin-left: 20px;
+
+  color: #000000;
+  font-family: $font-500;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.blog-post-comments__comment-date {
+  order: 1;
+  margin-left: auto;
+
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.blog-post-comments__comment-text {
+  margin: 0;
+  padding-top: 10px;
+
+  color: #000000;
+  font-family: $font-400;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.blog-post-comments__comment-text-2 {
+  margin: 0;
+  margin-left: 20px;
+
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.blog-post-comments__comment-button {
+  color: #0078b4;
+  font-family: $font-400;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: underline;
+
+  background-color: transparent;
+}

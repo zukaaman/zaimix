@@ -1,4 +1,4 @@
-.header {
+.blog-header {
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -10,12 +10,12 @@
   }
 }
 
-.header__logo {
+.blog-header__logo {
   width: 90px;
   height: 30px;
 }
 
-.header__search {
+.blog-header__search {
   position: relative;
 
   width: 34px;
@@ -41,7 +41,7 @@
   }
 }
 
-.header__text {
+.blog-header__text {
   margin: 0;
   padding-top: 5px;
   flex-basis: 100%;
