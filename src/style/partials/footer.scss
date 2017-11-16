@@ -2,9 +2,22 @@
   padding: 15px 0;
   background-color: #252525;
 
+  @include m-widths {
+    padding: 25px 0;
+  }
+
+  @include xl-widths {
+    padding: 30px 0;
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
+
+    @include m-widths {
+      flex-wrap: nowrap;
+      align-items: center;
+    }
   }
 }
 
@@ -23,6 +36,12 @@
   font-weight: 400;
   line-height: 28px;
   text-decoration: underline;
+
+  @include m-widths {
+    margin-right: auto;
+
+    line-height: 13px;
+  }
 }
 
 .footer__social-list {
@@ -34,10 +53,19 @@
   justify-content: center;
 
   list-style: none;
+
+  @include m-widths {
+    flex-basis: auto;
+    margin-top: 0;
+  }
 }
 
 .footer__social-item {
   margin-right: 10px;
+
+  @include m-widths {
+    margin-right: 15px;
+  }
 
   &:last-child {
     margin-right: 0;

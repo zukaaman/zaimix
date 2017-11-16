@@ -4,15 +4,28 @@
 
   background-color: #dde0e9;
 
+  @include m-widths {
+    padding: 25px 0;
+
+    background-color: #f8f8f8;
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
   }
 }
 
 .blog-post-header__logo {
   width: 90px;
   height: 28px;
+
+  @include m-widths {
+    width: 168px;
+    height: 53px;
+    margin-right: 30px;
+  }
 }
 
 .blog-post-header__search {
@@ -24,6 +37,21 @@
 
   border-radius: 50%;
   background-color: #fecc00;
+
+  @include m-widths {
+    width: 44px;
+    height: 44px;
+    order: 1;
+  }
+
+  @include xl-widths {
+    width: 38px;
+    height: 38px;
+  }
+
+  @include xxl-widths {
+    width: 350px;
+  }
 
   &::after {
     content: "";
@@ -38,8 +66,92 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
+
+    @include m-widths {
+      top: 14px;
+      right: 14px;
+    }
+
+    @include xl-widths {
+      top: 10px;
+      right: 10px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: #908f8f;
+    font-family: $font-400;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  ::-moz-placeholder {
+    color: #908f8f;
+    font-family: $font-400;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+    } /* Firefox 19+ */
+
+  :-moz-placeholder {
+    color: #908f8f;
+    font-family: $font-400;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
+    } /* Firefox 18- */
+
+  :-ms-input-placeholder {
+    color: #908f8f;
+    font-family: $font-400;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 25px;
   }
 }
+
+.blog-post-header__search-input {
+  box-sizing: border-box;
+  width: 350px;
+  height: 38px;
+  padding: 0 15px;
+  display: none;
+
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+
+  border: none;
+  border-radius: 19px;
+  background-color: #ffffff;
+  background-image: url("../img/search-round.png");
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @include xxl-widths {
+    display: block;
+  }
+}
+
+.blog-post-header__border {
+  display: none;
+  width: 1px;
+  height: 68px;
+  background-color: #000000;
+  opacity: 0.3;
+
+  @include m-widths {
+    display: block;
+    margin-right: 30px;
+  }
+}
+
 
 .blog-post-header__text {
   margin: 0;
@@ -51,4 +163,11 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 14px;
+
+  @include m-widths {
+    flex-basis: auto;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
