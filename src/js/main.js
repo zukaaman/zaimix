@@ -1,4 +1,5 @@
 /*
  * Custom
  */
-//= partials/app.js
+
+//= partials/carousel.js
