@@ -9,6 +9,8 @@
   }
 
   .container {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -27,29 +29,45 @@
 }
 
 .blog-header__search-wrapper {
+  position: relative;
+
   margin-left: auto;
   display: flex;
+  height: 34px;
 
   @include m-widths {
     order: 1;
   }
 
-  // &--open {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 10;
+  &--open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
-  //   width: 100%;
-  //   height: 100vh;
+    width: 100%;
+    height: 100vh;
+    padding: 15px 15px;
+    box-sizing: border-box;
 
-  //   background-color: #000000;
-  //   opacity: 0.5;
-  // }
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @include m-widths {
+      padding: 40px 40px;
+
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    @include xl-widths {
+      background-color: transparent;
+    }
+  }
 }
 
 .blog-header__search-button {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
 
   width: 34px;
   height: 34px;
@@ -60,17 +78,12 @@
   @include m-widths {
     width: 44px;
     height: 44px;
-    // order: 1;
   }
 
   @include xl-widths {
     width: 38px;
     height: 38px;
   }
-
-  // @include xxl-widths {
-  //   width: 350px;
-  // }
 
   &::after {
     content: "";
@@ -99,12 +112,22 @@
       height: 18px;
     }
   }
+
+  &--open {
+    top: 15px;
+    right: 15px;
+
+    @include m-widths {
+      top: 40px;
+      right: 40px;
+    }
+  }
 }
 
 .blog-header__search-input {
   box-sizing: border-box;
   width: 100%;
-  height: 38px;
+  height: 34px;
   padding: 0;
   padding-left: 15px;
   display: none;
@@ -116,20 +139,25 @@
   line-height: 25px;
 
   border: none;
-  border-radius: 19px;
+  border-radius: 17px;
   background-color: #ffffff;
-  // background-image: url("../img/search-round.png");
-  // background-repeat: no-repeat;
-  // background-position: right;
 
-  // @include xxl-widths {
-  //   display: block;
-  // }
+  &--open {
+    display: block;
+  }
 
-  // &--open {
-  //   display: block;
-  //   // float: right;
-  // }
+  @include m-widths {
+    height: 44px;
+
+    border-radius: 22px;
+  }
+
+  @include xl-widths {
+    width: 350px;
+    height: 38px;
+
+    border-radius: 19px;
+  }
 }
 
 ::-webkit-input-placeholder {

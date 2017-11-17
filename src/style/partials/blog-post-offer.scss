@@ -5,6 +5,24 @@
   background-image: url("../img/offer-img.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  @include m-widths {
+    padding: 90px 50px;
+
+    background-image: url("../img/offer-img-720.jpg");
+  }
+
+  @include xl-widths {
+    padding-top: 150px;
+
+    background-image: url("../img/offer-img-1200.jpg");
+  }
+
+  @include xl-widths {
+    padding-top: 150px;
+
+    background-image: url("../img/offer-img-1920.jpg");
+  }
 }
 
 .blog-post-offer__title {
@@ -17,6 +35,21 @@
   font-weight: 300;
   line-height: 25px;
   text-align: center;
+
+  @include m-widths {
+    padding-bottom: 30px;
+
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  br {
+    display: none;
+
+    @include xl-widths {
+      display: block;
+    }
+  }
 }
 
 .blog-post-offer__button {

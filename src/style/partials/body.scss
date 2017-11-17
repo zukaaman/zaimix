@@ -4,6 +4,8 @@ img {
 }
 
 button {
+  padding: 0;
+
   border: none;
 
   cursor: pointer;
@@ -26,11 +28,6 @@ a {
   @include xl-widths {
     max-width: 1110px;
     padding: 0 45px;
-  }
-
-  @include xxl-widths {
-    max-width: 1840px;
-    padding: 0 40px;
   }
 }
 
