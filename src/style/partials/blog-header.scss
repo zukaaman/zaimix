@@ -26,12 +26,33 @@
   }
 }
 
-.blog-header__search {
+.blog-header__search-wrapper {
+  margin-left: auto;
+  display: flex;
+
+  @include m-widths {
+    order: 1;
+  }
+
+  // &--open {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 10;
+
+  //   width: 100%;
+  //   height: 100vh;
+
+  //   background-color: #000000;
+  //   opacity: 0.5;
+  // }
+}
+
+.blog-header__search-button {
   position: relative;
 
   width: 34px;
   height: 34px;
-  margin-left: auto;
 
   border-radius: 50%;
   background-color: #fecc00;
@@ -39,7 +60,7 @@
   @include m-widths {
     width: 44px;
     height: 44px;
-    order: 1;
+    // order: 1;
   }
 
   @include xl-widths {
@@ -47,9 +68,9 @@
     height: 38px;
   }
 
-  @include xxl-widths {
-    width: 350px;
-  }
+  // @include xxl-widths {
+  //   width: 350px;
+  // }
 
   &::after {
     content: "";
@@ -78,43 +99,11 @@
       height: 18px;
     }
   }
-
-  ::-webkit-input-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
-  }
-
-  ::-moz-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
-    } /* Firefox 19+ */
-
-  :-moz-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
-    } /* Firefox 18- */
-
-  :-ms-input-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
-  }
 }
 
 .blog-header__search-input {
   box-sizing: border-box;
-  width: 350px;
+  width: 100%;
   height: 38px;
   padding: 0;
   padding-left: 15px;
@@ -129,13 +118,50 @@
   border: none;
   border-radius: 19px;
   background-color: #ffffff;
-  background-image: url("../img/search-round.png");
-  background-repeat: no-repeat;
-  background-position: right;
+  // background-image: url("../img/search-round.png");
+  // background-repeat: no-repeat;
+  // background-position: right;
 
-  @include xxl-widths {
-    display: block;
-  }
+  // @include xxl-widths {
+  //   display: block;
+  // }
+
+  // &--open {
+  //   display: block;
+  //   // float: right;
+  // }
+}
+
+::-webkit-input-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+::-moz-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  } /* Firefox 19+ */
+
+:-moz-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  } /* Firefox 18- */
+
+:-ms-input-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
 }
 
 .blog-header__border {

@@ -2,4 +2,4 @@
  * Custom
  */
 
-//= partials/carousel.js
+//= partials/blog-slider.js

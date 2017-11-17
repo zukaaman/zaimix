@@ -5,6 +5,35 @@
   background-image: url("../img/blog-post-1-img.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
+
+  .container {
+    @include xxl-widths {
+      max-width: 1110px;
+      padding: 0;
+    }
+  }
+
+  @include m-widths {
+    height: 690px;
+
+    background-image: url("../img/blog-post-1-img-720.png");
+    background-position: 100% 100%;
+  }
+
+  @include xl-widths {
+    height: auto;
+    padding: 140px 0;
+
+    background-position: 80% 100%;
+  }
+
+  @include xxl-widths {
+    height: auto;
+    padding: 190px 0;
+
+    background-image: url("../img/blog-post-1-img-1920.png");
+    background-position: 100% 100%;
+  }
 }
 
 .blog-post-1__button {
@@ -18,6 +47,11 @@
 
   border-radius: 5px;
   background-color: #fecc00;
+
+  @include m-widths {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .blog-post-1__title {
@@ -30,6 +64,16 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
+
+  @include m-widths {
+    font-size: 55px;
+    line-height: 65px;
+  }
+
+  @include xxl-widths {
+    font-size: 72px;
+    line-height: 84.67px;
+  }
 }
 
 .blog-post-1__text-1 {
@@ -40,6 +84,16 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
+
+  @include m-widths {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include xxl-widths {
+    font-size: 36px;
+    line-height: 84.67px;
+  }
 }
 
 .blog-post-1__text-wrapper {
@@ -67,6 +121,11 @@
       background-image: url("../img/eye.png");
       background-repeat: no-repeat;
       background-position: 0 0;
+
+      @include m-widths {
+        top: 16px;
+        left: -30px;
+      }
     }
   }
 }
@@ -81,4 +140,13 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 13px;
+
+  @include m-widths {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include m-widths {
+    padding-bottom: 10px;
+  }
 }
