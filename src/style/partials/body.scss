@@ -16,17 +16,18 @@ a {
 }
 
 .container {
-  max-width: 290px;
-  padding: 0 15px;
+  max-width: 90%;
+  padding: 0 5%;
   margin: 0 auto;
 
   @include m-widths {
-    max-width: 688px;
-    padding: 0 40px;
+    max-width: 95%;
+    padding: 0 2.5%;
   }
 
   @include xl-widths {
-    max-width: 1110px;
+    width: auto;
+    width: 1110px;
     padding: 0 45px;
   }
 }

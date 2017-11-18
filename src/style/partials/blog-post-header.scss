@@ -1,4 +1,6 @@
 .blog-post-header {
+  position: relative;
+
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -28,20 +30,18 @@
   }
 }
 
-.blog-post-header__search {
-  position: relative;
-
-  width: 34px;
-  height: 34px;
+.blog-post-header__search-wrapper {
   margin-left: auto;
-
-  border-radius: 50%;
-  background-color: #fecc00;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  height: 34px;
 
   @include m-widths {
+    order: 1;
+
     width: 44px;
     height: 44px;
-    order: 1;
   }
 
   @include xl-widths {
@@ -49,8 +49,59 @@
     height: 38px;
   }
 
-  @include xxl-widths {
-    width: 350px;
+  &--open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @include m-widths {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    @include xl-widths {
+      background-color: transparent;
+    }
+  }
+}
+
+.blog-post-header__search-button {
+  position: absolute;
+  top: 15px;
+  right: 5%;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+  background-color: #fecc00;
+
+  background-image: url("../img/loupe.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+
+  @include m-widths {
+    top: 40px;
+    right: 2.5%;
+
+    width: 44px;
+    height: 44px;
+  }
+
+  @include xl-widths {
+    right: 45px;
+
+    width: 38px;
+    height: 38px;
+
+    background-size: 18px;
   }
 
   &::after {
@@ -61,11 +112,6 @@
 
     width: 16px;
     height: 16px;
-
-    background-image: url("../img/loupe.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: cover;
 
     @include m-widths {
       top: 14px;
@@ -81,45 +127,26 @@
     }
   }
 
-  ::-webkit-input-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
-  }
+  &--open {
+    top: 15px;
 
-  ::-moz-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
-    } /* Firefox 19+ */
-
-  :-moz-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
-    } /* Firefox 18- */
-
-  :-ms-input-placeholder {
-    color: #908f8f;
-    font-family: $font-400;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 25px;
+    @include m-widths {
+      top: 40px;
+    }
   }
 }
 
 .blog-post-header__search-input {
-  box-sizing: border-box;
-  width: 350px;
-  height: 38px;
-  padding: 0 15px;
+  position: absolute;
+  top: 0;
+  right: 5%;
+
   display: none;
+  box-sizing: border-box;
+  width: 90%;
+  height: 34px;
+  padding: 0;
+  padding-left: 15px;
 
   color: #908f8f;
   font-family: $font-400;
@@ -128,15 +155,85 @@
   line-height: 25px;
 
   border: none;
-  border-radius: 19px;
+  border-radius: 17px;
   background-color: #ffffff;
-  background-image: url("../img/search-round.png");
-  background-repeat: no-repeat;
-  background-position: right;
+
+  &--open {
+    display: block;
+    top: 15px;
+
+    @include m-widths {
+      top: 40px;
+    }
+  }
+
+  @include m-widths {
+    top: 40px;
+    right: 2.5%;
+
+    width: 95%;
+    height: 44px;
+
+    border-radius: 22px;
+  }
+
+  @include xl-widths {
+    right: 45px;
+
+    width: 350px;
+    height: 38px;
+
+    border-radius: 19px;
+  }
 
   @include xxl-widths {
     display: block;
   }
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 34px;
+    height: 34px;
+
+    background-image: url("../img/loupe.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+::-moz-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  } /* Firefox 19+ */
+
+:-moz-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  } /* Firefox 18- */
+
+:-ms-input-placeholder {
+  color: #908f8f;
+  font-family: $font-400;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
 }
 
 .blog-post-header__border {

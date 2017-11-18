@@ -1,4 +1,6 @@
 .blog-header {
+  position: relative;
+
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -9,8 +11,6 @@
   }
 
   .container {
-    position: relative;
-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -29,32 +29,37 @@
 }
 
 .blog-header__search-wrapper {
-  position: relative;
-
   margin-left: auto;
+  width: 34px;
   display: flex;
+  justify-content: center;
   height: 34px;
 
   @include m-widths {
     order: 1;
+
+    width: 44px;
+    height: 44px;
+  }
+
+  @include xl-widths {
+    width: 38px;
+    height: 38px;
   }
 
   &--open {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
 
     width: 100%;
     height: 100vh;
-    padding: 15px 15px;
     box-sizing: border-box;
 
     background-color: rgba(0, 0, 0, 0.5);
 
     @include m-widths {
-      padding: 40px 40px;
-
       background-color: rgba(0, 0, 0, 0.3);
     }
 
@@ -66,8 +71,8 @@
 
 .blog-header__search-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 5%;
 
   width: 34px;
   height: 34px;
@@ -75,14 +80,26 @@
   border-radius: 50%;
   background-color: #fecc00;
 
+  background-image: url("../img/loupe.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+
   @include m-widths {
+    top: 40px;
+    right: 2.5%;
+
     width: 44px;
     height: 44px;
   }
 
   @include xl-widths {
+    right: 45px;
+
     width: 38px;
     height: 38px;
+
+    background-size: 18px;
   }
 
   &::after {
@@ -93,11 +110,6 @@
 
     width: 16px;
     height: 16px;
-
-    background-image: url("../img/loupe.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: cover;
 
     @include m-widths {
       top: 14px;
@@ -115,22 +127,24 @@
 
   &--open {
     top: 15px;
-    right: 15px;
 
     @include m-widths {
       top: 40px;
-      right: 40px;
     }
   }
 }
 
 .blog-header__search-input {
+  position: absolute;
+  top: 0;
+  right: 5%;
+
+  display: none;
   box-sizing: border-box;
-  width: 100%;
+  width: 90%;
   height: 34px;
   padding: 0;
   padding-left: 15px;
-  display: none;
 
   color: #908f8f;
   font-family: $font-400;
@@ -144,19 +158,47 @@
 
   &--open {
     display: block;
+    top: 15px;
+
+    @include m-widths {
+      top: 40px;
+    }
   }
 
   @include m-widths {
+    top: 40px;
+    right: 2.5%;
+
+    width: 95%;
     height: 44px;
 
     border-radius: 22px;
   }
 
   @include xl-widths {
+    right: 45px;
+
     width: 350px;
     height: 38px;
 
     border-radius: 19px;
+  }
+
+  @include xxl-widths {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 34px;
+    height: 34px;
+
+    background-image: url("../img/loupe.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
   }
 }
 

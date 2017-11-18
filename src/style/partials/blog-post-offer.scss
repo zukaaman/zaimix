@@ -4,7 +4,8 @@
 
   background-image: url("../img/offer-img.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center top;
+  background-size: 100%;
 
   @include m-widths {
     padding: 90px 50px;
