@@ -2,10 +2,10 @@
   .container {
     position: relative;
 
-    @include xxl-widths {
-      max-width: 1110px;
-      padding: 0;
-    }
+    // @include xxl-widths {
+    //   max-width: 1110px;
+    //   padding: 0;
+    // }
   }
 }
 
@@ -20,11 +20,11 @@
   }
 
   @include xl-widths {
-    left: 830px;
+    left: 835px;
   }
 
-  @include xl-widths {
-    left: 835px;
+  @include xxl-widths {
+    left: 880px;
   }
 }
 
