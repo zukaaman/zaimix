@@ -92,9 +92,9 @@ gulp.task('style:build', function () {
     .pipe(sourcemaps.init()) //инициализируем soucemap
     .pipe(sass()) //Скомпилируем
     .pipe(prefixer()) //Добавим браузерные префиксы
-    // .pipe(cleanCSS()) //Сожмем
-    // .pipe(sourcemaps.write()) //пропишем sourcemap
-    // .pipe(rename({suffix: '.min'})) //добавим суффикс .min к имени выходного файла
+    .pipe(cleanCSS()) //Сожмем
+    .pipe(sourcemaps.write()) //пропишем sourcemap
+    .pipe(rename({suffix: '.min'})) //добавим суффикс .min к имени выходного файла
     .pipe(gulp.dest(path.build.css)) //выгрузим в build
     .pipe(reload({stream: true})); //перезагрузим сервер
 });

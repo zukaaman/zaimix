@@ -4,30 +4,19 @@
   padding: 15px 0;
 
   background-color: #dde0e9;
-  // background-image: url("../img/blog-post-1-img.png");
-  // background-repeat: no-repeat;
-  // background-position: 100% 100%;
 
   @include m-widths {
     height: 690px;
-
-    // background-image: url("../img/blog-post-1-img-720.png");
-    // background-position: 100% 100%;
   }
 
   @include xl-widths {
     height: auto;
     padding: 140px 0;
-
-    // background-position: 80% 100%;
   }
 
   @include xxl-widths {
     height: auto;
     padding: 190px 0;
-
-    // background-image: url("../img/blog-post-1-img-1920.png");
-    // background-position: 100% 100%;
   }
 }
 
